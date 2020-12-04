@@ -3,9 +3,11 @@ const XLSX = require('./xlsx.full.min.js');
 
 // BEGIN:VCARD
 // VERSION:3.0
-// PRODID:-//Apple Inc.//iOS 13.5.1//EN
-// N:;Nguyễn Demo;;;
-// FN:Nguyễn Van Demo
-// TEL;type=CELL;type=VOICE;type=pref:090 123456
-// REV:2020-08-14T07:10:27Z
+// FN:bang
+// N:;bang;;;
+// TEL;TYPE=CELL:0914577757
 // END:VCARD
+
+//TH: 2 sdt
+// TEL;TYPE=WORK,VOICE:(111) 555-1212
+// TEL;TYPE=HOME,VOICE:(404) 555-1212

@@ -4,6 +4,7 @@ PRODID:-//Apple Inc.//iOS 13.5.1//EN
 N:;Nguyễn Demo;;;
 FN:Nguyễn Van Demo
 TEL;type=CELL;type=VOICE;type=pref:090 123456
+TEL;type=CELL;type=VOICE;type=pref:090 123456
 REV:2020-08-14T07:10:27Z
 END:VCARD
 BEGIN:VCARD
@@ -12,6 +13,7 @@ PRODID:-//Apple Inc.//iOS 13.3.1//EN
 N:;Nguyễn Demo;;;
 FN:Nguyễn Tuan Demo
 TEL;type=CELL;type=VOICE;type=pref:099 8498498
+TEL;TYPE=home,voice;VALUE=uri:tel:+1-404-555-1212
 REV:2020-03-02T01:49:17Z
 END:VCARD
 BEGIN:VCARD

@@ -26,20 +26,28 @@ function handle_data(data) {//return array object [{name:xxxx, telephone:xxx},..
 
     var TEL = data.indexOf("TEL", end_fn);
     var be_dauhaicham = data.indexOf(":", TEL);
+    if (data[be_dauhaicham + 1] === 't' && data[be_dauhaicham + 2] === 'e' && data[be_dauhaicham + 3] === 'l'){//for vCard 4.0
+      be_dauhaicham += 4;//TEL;TYPE=home,voice;VALUE=uri:tel:+1-404-555-1212
+    }
     var end_tel = data.indexOf("\n", be_dauhaicham);
     var telephone = data.substring(be_dauhaicham + 1, end_tel - 1);
+
     if (data[end_tel + 1] === 'T' && data[end_tel + 2] === 'E' && data[end_tel + 3] === 'L' ) {//TH 2 TEL
       var telephone2_be = data.indexOf(":", end_tel + 1);
+      if (data[telephone2_be + 1] === 't' && data[telephone2_be + 2] === 'e' && data[telephone2_be + 3] === 'l'){//for vCard 4.0
+        telephone2_be += 4;//TEL;TYPE=home,voice;VALUE=uri:tel:+1-404-555-1212
+      }
       var telephone2_end = data.indexOf("\n", telephone2_be);
       var telephone2 = data.substring(telephone2_be + 1, telephone2_end - 1);
-      telephone += ' | ' + telephone2;
-    }
+
+    } else telephone2 = '';
     //console.log(telephone);
     //console.log(fullname +': '+ telephone);
     string_data.push(
         {
           name: fullname,
-          tel: telephone
+          tel1: telephone,
+          tel2: telephone2
         }
     );
     begin = data.indexOf("BEGIN:VCARD", end_tel);
@@ -49,9 +57,9 @@ function handle_data(data) {//return array object [{name:xxxx, telephone:xxx},..
 
 function write2Excel(data_array) {
   const data = [];
-  data.push(['Full Name', 'Telephone']);
+  data.push(['Full Name', 'Telephone 1 (Work)', 'Telephone 2 (Home)']);
   data_array.forEach(
-    element => data.push([element.name, element.tel])
+    element => data.push([element.name, element.tel1, element.tel2])
   );
   const book = XLSX.utils.book_new();
   const sheet = XLSX.utils.aoa_to_sheet(data);
