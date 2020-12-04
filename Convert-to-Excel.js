@@ -1,10 +1,10 @@
 const fs = require('fs').promises;
 const XLSX = require('./xlsx.full.min.js');
 
-readFile("input_filevCard_In_Here/vCard_Input.vcf");     //🎈vCardi_Input.vcf - 🧪file input  //🧶🛒vCrad v2.1 v3.0 v4.0
+readFile("input_filevCard_In_Here/vCard_Input.vcf");//🎈vCardi_Input.vcf - 🧪file input  //🧶🛒vCrad v2.1 v3.0 v4.0
 const filename = "Contact_Output";//🎇Contact_Output.xls - file output
 
-async function readFile(filePath) {
+async function readFile(filePath) {// *vcf format: vCard v2.1 v3.0 v4.0
   try {
     const data = await fs.readFile(filePath);
     write2Excel(handle_data(data.toString()));
@@ -13,7 +13,7 @@ async function readFile(filePath) {
   }
 }
 
-function handle_data(data) {//return array object [{name:xxxx, telephone:xxx},...]
+function handle_data(data) {//return array object [{name:xxxx, tel1:xxx, tel2:xxx },...]
   var string_data = [];
   //console.log(data);
   var begin = data.indexOf("BEGIN:VCARD");
@@ -55,7 +55,7 @@ function handle_data(data) {//return array object [{name:xxxx, telephone:xxx},..
   return string_data;
 }
 
-function write2Excel(data_array) {
+function write2Excel(data_array) {//input: array object [{name:xxxx, tel1:xxx, tel2:xxx },...]
   const data = [];
   data.push(['Full Name', 'Telephone 1 (Work)', 'Telephone 2 (Home)']);
   data_array.forEach(
@@ -65,4 +65,5 @@ function write2Excel(data_array) {
   const sheet = XLSX.utils.aoa_to_sheet(data);
   XLSX.utils.book_append_sheet(book, sheet, 'Contact_Sheet');
   XLSX.writeFile(book, `Output/${filename}.xls`);
+  console.log('(*^＠^*) Convert successful, please check folder Output: ' + `"${filename}.xls"`);
 }
