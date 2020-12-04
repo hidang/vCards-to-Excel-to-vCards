@@ -2,10 +2,10 @@
 🎈Convert data from vCards(.vcf) to Excel(.xls) 🎭or🎭 Excel(.xls) to vCards(.vcf) by JavaScript, Easy and fast.
 
 # 📕Excel Format:
-| Full Name       | Telephone 1 (Work)| Telephone 2 (Home)|            
-| --------------- | ---------------| ---------------|
-| Nguyễn Văn Demo | 000000000000000| 000000000000000|
-| ------------------------------- | ------------------------------- | -------------------------------|
+| Full Name       | Telephone 1 (Work) | Telephone 2 (Home) |            
+| --------------- | --------------- | --------------- |
+| Nguyễn Văn Demo | 012345678901234 | 012345678901234 |
+| Nguyễn Tuan Demo | 012345678901234 | 012345678901234 |
 
 # 📙vCards Format:
 | vCard 2.1 | vCard 3.0 | vCard 4.0   |
