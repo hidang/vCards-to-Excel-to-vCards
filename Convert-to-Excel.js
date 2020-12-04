@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 const XLSX = require('./xlsx.full.min.js');
 
-readFile("input_filevCard_In_Here/vCards_Input.vcf");     //🎈vCardi_Input.vcf - 🧪file input  //🧶🛒vCrad v2.1 v3.0 v4.0
+readFile("input_filevCard_In_Here/vCard_Input.vcf");     //🎈vCardi_Input.vcf - 🧪file input  //🧶🛒vCrad v2.1 v3.0 v4.0
 const filename = "Contact_Output";//🎇Contact_Output.xls - file output
 
 async function readFile(filePath) {
