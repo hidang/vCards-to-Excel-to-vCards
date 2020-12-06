@@ -1,0 +1,12 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+
+
+# testing
+/Output
+/input_fileExcel_In_Here/Excel_Input_.xls
+/input_fileExcel_In_Here/Excel_Input.xls
+
+/input_filevCard_In_Here/vCard_Input.vcf
+/input_filevCard_In_Here/vCard_Input_.vcf
