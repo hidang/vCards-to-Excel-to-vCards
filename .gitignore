@@ -4,3 +4,6 @@
 /Output/
 /input_fileExcel_In_Here/
 /input_filevCard_In_Here/
+
+#"/folder/"  : khong thao tac cho du file co nam o cloud
+# "/folder"  : van thao tac voi cac file dang nam o cloud
