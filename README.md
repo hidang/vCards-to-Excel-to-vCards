@@ -16,11 +16,11 @@
 # 🪓vCards to Excel
 
 - Put your "vCard_Input.vcf" file in Folder "input_filevCard_In_Here"
-- Run Convert-to-Excel.js
+- Run Convert-to-Excel.js (> node Convert-to-Excel.js)
 - Check folder Output
 
 # 🔨Excel to vCards
 
 - Put your "Excel_Input.xls" file in Folder "input_fileExcel_In_Here"
-- Run Convert-to-vCard.js
+- Run Convert-to-vCard.js (> node Convert-to-vCard.js)
 - Check folder Output
