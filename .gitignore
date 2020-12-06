@@ -4,9 +4,7 @@
 
 
 # testing
+.tempCodeRunnerFile.js
 /Output
-/input_fileExcel_In_Here/Excel_Input_.xls
-/input_fileExcel_In_Here/Excel_Input.xls
-
-/input_filevCard_In_Here/vCard_Input.vcf
-/input_filevCard_In_Here/vCard_Input_.vcf
+/input_fileExcel_In_Here
+/input_filevCard_In_Here
