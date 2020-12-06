@@ -5,5 +5,5 @@
 #/input_fileExcel_In_Here/
 /input_filevCard_In_Here/
 
-#"/folder/"  : khong thao tac cho du file co nam o cloud //no add file
-# "/folder"  : van thao tac voi cac file dang nam o cloud //no add file
+#"/folder/"  : no change data in files if file in cloud //no add file
+# "/folder"  : change data in files if file in cloud //no add file
