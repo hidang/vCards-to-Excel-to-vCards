@@ -65,5 +65,5 @@ function write2Excel(data_array) {//input: array object [{name:xxxx, tel1:xxx, t
   const sheet = XLSX.utils.aoa_to_sheet(data);
   XLSX.utils.book_append_sheet(book, sheet, 'Contact_Sheet');
   XLSX.writeFile(book, `Output/${filename_output}.xls`);
-  console.log('(*^＠^*) Convert successful, please check folder Output: ' + `"${filename_output}.xls"`);
+  console.log('(*^＠^*) Convert successful, please check folder Output: ' + `"${filename_output}.xls|.xlsx"`);
 }

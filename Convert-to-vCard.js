@@ -3,9 +3,9 @@ const XLSX = require("./xlsx.full.min.js");
 
 const filename_input = "Excel_Input";
 const folder_inputFileExcel = "./input_fileExcel_In_Here";
-const filename_ouput = "Contact_vCard";
+const filename_output = "Contact_vCard";
 
-create_file_vCard(converdata2vCard(get_handle_data2array(get_workbook_Excel(folder_inputFileExcel))));//Start->
+create_file_vCard(converdata2vCard(converdata2array(get_workbook_Excel(folder_inputFileExcel))));//Start->
 
 function get_workbook_Excel(_pathFolder) {//return fist_workbook in Excel file
   try {
@@ -20,7 +20,7 @@ function get_workbook_Excel(_pathFolder) {//return fist_workbook in Excel file
   }
   return workbook;
 }
-function get_handle_data2array(workbook) {//return array object [{name:Nguyen Van Demo, tel1: xxxxxx, tel2: xxxxx},...]
+function converdata2array(workbook) {//return array object [{name:Nguyen Van Demo, tel1: xxxxxx, tel2: xxxxx},...]
   var first_sheet_name = workbook.SheetNames[0];//Contact Sheet must first_sheet_name
   var worksheet = workbook.Sheets[first_sheet_name];//get worksheet "Contact Sheet"
 
@@ -42,7 +42,7 @@ function get_handle_data2array(workbook) {//return array object [{name:Nguyen Va
   }
   return data_array_object;
 }
-function converdata2vCard(data){//return string_vCard format
+function converdata2vCard(data){//return string_vCard format!
   var string_vCard ='';
   data.forEach(function(item, index){
     //tel1, tel2 ->must string!
@@ -92,6 +92,11 @@ END:VCARD`;
   }
   return string_data;
 }
-function create_file_vCard(string_vCard){
-  
+async function create_file_vCard(string_vCard){//write to file vCard.vcf
+  try {
+    await fs.writeFile(`./Output/${filename_output}.vcf`, string_vCard);
+  } catch (err) {
+    console.log(err);
+  }
+  console.log('(*^＠^*) Convert successful, please check folder Output: ' + `"${filename_output}.vcf"`);
 }
