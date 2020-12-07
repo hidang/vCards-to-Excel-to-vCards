@@ -1,9 +1,9 @@
 const fs = require("fs").promises;
 const XLSX = require("./xlsx.full.min.js");
 
-const filename_input = "Excel_Input";
+const filename_input = "Excel_Input";//🎈Excel_Input.xls|xlsx - 🧪file input
 const folder_inputFileExcel = "./input_fileExcel_In_Here";
-const filename_output = "Contact_vCard";
+const filename_output = "Contact_vCard";//🧶Contact_vCard.vcf - 🎇file output
 
 create_file_vCard(converdata2vCard(converdata2array(get_workbook_Excel(folder_inputFileExcel))));//Start->
 
