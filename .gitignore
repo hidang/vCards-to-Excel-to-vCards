@@ -4,6 +4,7 @@
 /Output/
 /input_fileExcel_In_Here/
 /input_filevCard_In_Here/
-
+.Excel_Input_.xls
+.Contact_vCard.vcf
 #"/folder/"  : no change data in files if file in cloud //no add file
 # "/folder"  : change data in files if file in cloud    //no add file
