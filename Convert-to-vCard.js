@@ -44,6 +44,8 @@ function converdata2array(workbook) {//return array object [{name:Nguyen Van Dem
 }
 function converdata2vCard(data){//return string_vCard format!
   var string_vCard ='';
+  var string_error ='';
+  var index_error = 0;
   data.forEach(function(item, index){
     //tel1, tel2 ->must string!
     //item: {name:Nguyen Van Demo, tel1: xxxxxx, tel2: xxxxx}
@@ -52,7 +54,9 @@ function converdata2vCard(data){//return string_vCard format!
     //   return;
     // }
     if (item.tel1 === '' && item.tel2 === ''){
-      console.log('Khong ton tai so dien thoai '+item.name);//add to data error
+      //console.log('Khong ton tai so dien thoai ' + item.name);//add to data error
+      string_error += `   ${++index_error}:${item.name}\n`;
+      // ++index_error;
       return;
     }
     var letters = /^[ ()0-9+-]+$/;//✂ match(Space | ( | ) | 0->9 | + | -)
@@ -62,13 +66,21 @@ function converdata2vCard(data){//return string_vCard format!
         string_vCard += add_data2string(item);
       else{
         //console.log(item.name);
+        string_error += `   ${++index_error}:${item.name}: ${item.tel1} | ${item.tel2}\n`;
+        // ++index_error;
         return;
       }
     else{
       //console.log(item.name);
+      string_error += `   ${++index_error}:${item.name}: ${item.tel1} | ${item.tel2}\n`;
+      // ++index_error;
       return;
     }
   });
+  //hadle_error
+  if (string_error !== ''){
+    console.log(`!!!List No phone or invalid phone number: ${index_error}\n${string_error}\nWarning: ${index_error} Invalid phone number!`);
+  }
   return string_vCard;
 }
 function add_data2string(item) {//return string -vCard format
@@ -93,6 +105,10 @@ END:VCARD`;
   return string_data;
 }
 async function create_file_vCard(string_vCard){//write to file vCard.vcf
+  if (string_vCard === '') {
+    console.log('!Conversion failed: "No phone or invalid phone number", Please check file input');
+    return;
+  }
   try {
     await fs.writeFile(`./Output/${filename_output}.vcf`, string_vCard);
   } catch (err) {
