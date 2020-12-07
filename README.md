@@ -3,7 +3,7 @@
 🎈Convert data from vCards(.vcf) to Excel(.xls) 🎭or🎭 Excel(.xls) to vCards(.vcf) by JavaScript.
 * Support UTF-8
 * Request [Node.js](https://nodejs.org/en/about/releases/) 10 and above
-* Easy and fast
+* Easy to upgrade
 * Written in [JavaScript](https://www.javascript.com/)
 # 📕Excel Format:
 
