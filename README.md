@@ -16,7 +16,7 @@
 # 📙vCards Format:
 
 | [vCard 2.1](https://en.wikipedia.org/wiki/VCard#vCard_2.1) | [vCard 3.0](https://en.wikipedia.org/wiki/VCard#vCard_3.0) | [vCard 4.0](https://en.wikipedia.org/wiki/VCard#vCard_4.0) |
-|--| -- | -- | -- |
+| ------ | ------ | ------ |
 # 🪓vCards to Excel
 
 - Put your "vCard_Input.vcf" file in Folder "input_filevCard_In_Here"
