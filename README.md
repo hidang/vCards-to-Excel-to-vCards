@@ -1,14 +1,17 @@
 ## vCards-to-Excel-to-vCards Easy and Fast.
 
-🎈Convert data from vCards(.vcf) to Excel(.xls) 🎭or🎭 Excel(.xls) to vCards(.vcf) by JavaScript, Easy and fast.
-
+🎈Convert data from vCards(.vcf) to Excel(.xls) 🎭or🎭 Excel(.xls) to vCards(.vcf) by JavaScript.
+* Support UTF-8
+* Request [Node.js](https://nodejs.org/en/about/releases/) 10 and above
+* Easy and fast
+* Written in [JavaScript](https://www.javascript.com/)
 # 📕Excel Format:
 
 |-0-| Full Name        | Telephone 1 (Work) | Telephone 2 (Home) |
 |--| ---------------- | ------------------ | ------------------ |
 |1| Nguyễn Văn Demo  | 012345678901234    | +01 245678901234   |
-|2| Nguyễn Tuan Demo | 012345678901234    | 012-4567890-234    |
-
+|2| Nguyễn Tuấn Demo | 012345678901234    | 012-4567890-234    |
+|3| hidang Demo | +01 (234)890 -134    | +(01)2-45(67)89-23    |
 # 📙vCards Format:
 
 | vCard 2.1 | vCard 3.0 | vCard 4.0 |
