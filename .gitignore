@@ -4,7 +4,7 @@
 /Output/
 #"/folder/" || "/folder"  : van thay doi file neu file da nam o cloud
 /input_fileExcel_In_Here
-/input_filevCard_In_Here
+#/input_filevCard_In_Here
 #->
 # .Excel_Input_.xls
 # .vCard_Input_.vcf
