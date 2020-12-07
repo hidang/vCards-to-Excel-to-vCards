@@ -3,8 +3,9 @@
 🎈Convert data from vCards(.vcf) to Excel(.xls) 🎭or🎭 Excel(.xls) to vCards(.vcf) by JavaScript.
 * Support UTF-8
 * Request [Node.js](https://nodejs.org/en/about/releases/) 10 and above
-* Easy to upgrade
 * Written in [JavaScript](https://www.javascript.com/)
+* Use [Sheetjs](https://sheetjs.com/) to read and write Excel files
+* Easy to upgrade
 # 📕Excel Format:
 
 |-0-| Full Name        | Telephone 1 (Work) | Telephone 2 (Home) |
@@ -14,8 +15,8 @@
 |3| hidang Demo | +01 (234)890 -134    | +(01)2-45(67)89-23    |
 # 📙vCards Format:
 
-| vCard 2.1 | vCard 3.0 | vCard 4.0 |
-
+| [vCard 2.1](https://en.wikipedia.org/wiki/VCard#vCard_2.1) | [vCard 3.0](https://en.wikipedia.org/wiki/VCard#vCard_3.0) | [vCard 4.0](https://en.wikipedia.org/wiki/VCard#vCard_4.0) |
+|--| -- | -- | -- |
 # 🪓vCards to Excel
 
 - Put your "vCard_Input.vcf" file in Folder "input_filevCard_In_Here"
