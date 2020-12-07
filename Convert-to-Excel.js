@@ -21,7 +21,7 @@ function handle_data(data) {//return array object [{name:xxxx, tel1:xxx, tel2:xx
     var FN = data.indexOf("FN:", begin);
     var be_fn = FN + 3;
     var end_fn = data.indexOf("\n", be_fn);
-    var fullname = data.substring(be_fn, end_fn - 1)
+    var fullname = data.substring(be_fn, end_fn)
     //console.log(fullname);
 
     var TEL = data.indexOf("TEL", end_fn);
@@ -30,7 +30,7 @@ function handle_data(data) {//return array object [{name:xxxx, tel1:xxx, tel2:xx
       be_dauhaicham += 4;//TEL;TYPE=home,voice;VALUE=uri:tel:+1-404-555-1212
     }
     var end_tel = data.indexOf("\n", be_dauhaicham);
-    var telephone = data.substring(be_dauhaicham + 1, end_tel - 1);
+    var telephone = data.substring(be_dauhaicham + 1, end_tel);
 
     if (data[end_tel + 1] === 'T' && data[end_tel + 2] === 'E' && data[end_tel + 3] === 'L' ) {//TH 2 TEL
       var telephone2_be = data.indexOf(":", end_tel + 1);
@@ -38,7 +38,7 @@ function handle_data(data) {//return array object [{name:xxxx, tel1:xxx, tel2:xx
         telephone2_be += 4;//TEL;TYPE=home,voice;VALUE=uri:tel:+1-404-555-1212
       }
       var telephone2_end = data.indexOf("\n", telephone2_be);
-      var telephone2 = data.substring(telephone2_be + 1, telephone2_end - 1);
+      var telephone2 = data.substring(telephone2_be + 1, telephone2_end);
 
     } else telephone2 = '';
     //console.log(telephone);
