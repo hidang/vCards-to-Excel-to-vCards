@@ -26,5 +26,5 @@
 # 🔨Excel to vCards
 
 - Put your "Excel_Input.xls" file in Folder "input_fileExcel_In_Here"
-- Run Convert-to-vCard.js (> node Convert-to-vCard.js)
+- Run Convert-to-vCard.js (> `node Convert-to-vCard.js`)
 - Check folder Output
