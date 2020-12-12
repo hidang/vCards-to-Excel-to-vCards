@@ -20,7 +20,7 @@
 # 🪓vCards to Excel
 
 - Put your "vCard_Input.vcf" file in Folder "input_filevCard_In_Here"
-- Run Convert-to-Excel.js (> node Convert-to-Excel.js)
+- Run Convert-to-Excel.js (> `node Convert-to-Excel.js`)
 - Check folder Output
 
 # 🔨Excel to vCards
